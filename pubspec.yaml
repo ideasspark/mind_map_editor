@@ -35,6 +35,14 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  permission_handler:
+    git:
+      url: https://github.com/alex-melnyk/flutter-permission-handler.git
+      path: permission_handler
+      ref: master
+  app_settings:
+    git:
+        url: https://github.com/BrianTran24/app_settings.git
 
 dev_dependencies:
   flutter_test:
@@ -46,6 +54,22 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
+
+
+dependency_overrides:
+  # https://github.com/Baseflow/flutter-permission-handler/pull/1207
+  permission_handler:
+    git:
+      url: https://github.com/alex-melnyk/flutter-permission-handler.git
+      path: permission_handler
+      ref: master
+  # https://github.com/Baseflow/flutter-permission-handler/pull/1207
+  permission_handler_apple:
+    git:
+      url: https://github.com/alex-melnyk/flutter-permission-handler.git
+      path: permission_handler_apple
+      ref: master
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

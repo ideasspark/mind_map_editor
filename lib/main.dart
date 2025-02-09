@@ -38,9 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() async {
     PermissionStatus status= await Permission.camera.request();
-    CameraPermissionDialog.show(context);
-    if(await Permission.camera.isGranted){
-      AppSettings.openAppSettingsPanel(AppSettingsPanelType.internetConnectivity);
+    print(status);
+    if(!status.isGranted){
+      CameraPermissionDialog.show(context);
+      return;
     }
     setState(() {
       _counter++;
